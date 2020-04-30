@@ -16,9 +16,9 @@ spring:
     name: user-center
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://${bx.ip}:3306/user-center?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+      url: jdbc:mysql://${bx.ip}:3306/tx-cloud?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
       username: root
-      password: root
+      password: 123456
       initialSize: 5
       minIdle: 5
       maxActive: 20
@@ -45,8 +45,8 @@ spring:
 #    password: cloud-dev
 #    virtual-host: /
   redis:
-      host: ${bx.ip}
-      port: 6379
+      host: 192.168.1.200
+      port: 6378
       password:
       timeout: 10s
       lettuce:

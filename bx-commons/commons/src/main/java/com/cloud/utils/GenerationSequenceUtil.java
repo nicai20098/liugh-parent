@@ -140,6 +140,7 @@ public class GenerationSequenceUtil {
         int machinePiece;
         try {
             StringBuilder                   stringBuilder     = new StringBuilder();
+            //Enumeration方式已经 用Iterable接口替代了 用途几乎一样
             Enumeration< NetworkInterface > networkInterfaces = NetworkInterface.getNetworkInterfaces();
             while ( networkInterfaces.hasMoreElements() ) {
                 NetworkInterface networkInterface = networkInterfaces.nextElement();
@@ -166,7 +167,7 @@ public class GenerationSequenceUtil {
 
     // Creates the process identifier. This does not have to be unique per class loader because
     // NEXT_COUNTER will provide the uniqueness.
-    // 创建进程标识符。这并不是每个类装入器,因为必须是唯一的
+    // 创建进程标识符。这并不是每个类装入器,因为必须是唯一的 获取PID
     private static int createProcessIdentifier () {
         int processId;
         try {

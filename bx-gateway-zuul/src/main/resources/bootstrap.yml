@@ -23,7 +23,7 @@ spring:
           server-addr: ${bx.nacos.server-addr}
 
 server:
-  port: 8080
+  port: 8023
 
 management:
   endpoints:
